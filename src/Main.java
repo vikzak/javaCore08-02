@@ -38,8 +38,7 @@ public class Main {
         track[2] = new Track("Школа",300);
         boolean result = true;
         // Преодолевают трассу люди
-        for (int i = 0; 0 < human.length; i++){
-            if (i >= human.length) break;
+        for (int i = 0; i < human.length; i++){
             result = track[i].moving(human[i]);
             if (!result) {
                 System.out.println("Полностью трассу пройти не удалось\n");
@@ -53,8 +52,7 @@ public class Main {
             }
         }
         // Преодолевают трассу роботы
-        for (int i = 0; 0 < robot.length; i++){
-            if (i >= robot.length) break;
+        for (int i = 0; i < robot.length; i++){
             result = track[i].moving(robot[i]);
             if (!result) {
                 System.out.println("Полностью трассу пройти не удалось\n");
@@ -68,8 +66,7 @@ public class Main {
             }
         }
         // Преодолевают трассу коты
-        for (int i = 0; 0 < cat.length; i++){
-            if (i >= cat.length) break;
+        for (int i = 0; i < cat.length; i++){
             result = track[i].moving(cat[i]);
             if (!result) {
                 System.out.println("Полностью трассу пройти не удалось\n");
