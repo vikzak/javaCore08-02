@@ -19,7 +19,6 @@ public class Wall extends Fizio {
 
     @Override
     public boolean moving(Actions actions) {
-        //System.out.printf("Препятствие: s%, высотой: $s - ",super.getName(),this.wallHeight);
         System.out.printf("Препятствие: " + super.getName() + ", высотой: " + this.wallHeight +"м.\n");
         actions.jump();
         if (getWallHeight() <= actions.getJumpHeight()){

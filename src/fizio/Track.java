@@ -18,7 +18,6 @@ public class Track extends Fizio{
 
     @Override
     public boolean moving(Actions actions) {
-        //System.out.printf("Трасса: s%, длинною: $s - ",super.getName(),this.lengthTrack);
         System.out.printf("Трасса: " + super.getName() + ", длина: " + this.lengthTrack + "м.\n");
         actions.run();
         if (getLengthTrack() <= actions.getRunLength()){
