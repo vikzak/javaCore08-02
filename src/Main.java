@@ -19,6 +19,7 @@ public class Main {
         human[0] = new Human("Илья",900,1.30);
         human[1] = new Human("Петя",1400,1.50);
         human[2] = new Human("Ваня",150,0.60);
+
         Robot[] robot = new  Robot[3];
         robot[0] = new Robot("Вертер",5000,2.20);
         robot[1] = new Robot("Терминатор Т900",7000,3.10);
@@ -28,10 +29,12 @@ public class Main {
         cat[0] = new Cat("Муфаса", 1250,3);
         cat[1] = new Cat("Зевс", 1200,3.01);
         cat[2] = new Cat("Вася", 900,2.1);
+
         Wall[] wall = new Wall[3];
         wall[0] = new Wall("забор",1.1);
         wall[1] = new Wall("оградка",0.3);
         wall[2] = new Wall("стена",3.1);
+
         Track[] track = new Track[3];
         track[0] = new Track("Парк",500);
         track[1] = new Track("Стадион",1500);
