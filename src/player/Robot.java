@@ -1,6 +1,6 @@
 package player;
-
-public class Robot {
+import fizio.Actions;
+public class Robot implements Actions {
     private String name;
     private int runLengthLimit;
     private double jumpHeightLimit;
@@ -11,27 +11,23 @@ public class Robot {
         this.jumpHeightLimit = jumpHeightLimit;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public void run() {
+        System.out.printf("Робот:%s может пробежать дистанцию %sм.\n",this.name,this.getRunLength());
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public void jump() {
+        System.out.printf("Робот:%s может прыгнуть на %sм.\n",this.name,this.getJumpHeight());
     }
 
-    public int getRunLengthLimit() {
-        return runLengthLimit;
+    @Override
+    public int getRunLength() {
+        return this.runLengthLimit;
     }
 
-    public void setRunLengthLimit(int runLengthLimit) {
-        this.runLengthLimit = runLengthLimit;
-    }
-
-    public double getJumpHeightLimit() {
-        return jumpHeightLimit;
-    }
-
-    public void setJumpHeightLimit(double jumpHeightLimit) {
-        this.jumpHeightLimit = jumpHeightLimit;
+    @Override
+    public double getJumpHeight() {
+        return this.jumpHeightLimit;
     }
 }

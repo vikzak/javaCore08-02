@@ -1,6 +1,6 @@
 package player;
-
-public class Human {
+import fizio.Actions;
+public class Human implements Actions {
     private String name;
     private int runLengthLimit;
     private double jumpHeightLimit;
@@ -15,14 +15,6 @@ public class Human {
         return name;
     }
 
-    public int getRunLengthLimit() {
-        return runLengthLimit;
-    }
-
-    public double getJumpHeightLimit() {
-        return jumpHeightLimit;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -35,8 +27,24 @@ public class Human {
         this.jumpHeightLimit = jumpHeightLimit;
     }
 
-/*    public void createHuman(){
-        int i = 0;
-        Human human[0] = new Human("Vasya",500,0.90);
-    }*/
+    @Override
+    public void run (){
+        System.out.printf("Человек:%s может пробежать дистанцию %sм.\n",this.name,this.getRunLength());
+    }
+
+    @Override
+    public void jump (){
+        System.out.printf("Человек:%s может прыгнуть на %sм.\n",this.name,this.getJumpHeight());
+    }
+
+    @Override
+    public int getRunLength() {
+        return this.runLengthLimit;
+    }
+
+    @Override
+    public double getJumpHeight() {
+        return this.jumpHeightLimit;
+    }
+
 }
